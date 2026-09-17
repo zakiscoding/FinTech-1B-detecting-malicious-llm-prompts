@@ -1,0 +1,165 @@
+{
+  "dataset": {
+    "id": "xTRam1/safe-guard-prompt-injection",
+    "revision": "a3a877d608f37b7d20d9945671902df895ecdb46"
+  },
+  "split_sizes": {
+    "train": 7000,
+    "val": 1236,
+    "test": 2060
+  },
+  "model": {
+    "name": "logreg",
+    "class_weights": {
+      "0": 0.7173601147776184,
+      "1": 1.6501650165016502
+    },
+    "extra": {
+      "C": 1.0,
+      "max_features": 20000
+    }
+  },
+  "threshold_tuning": {
+    "min_precision": 0.8,
+    "selected_threshold": 0.15,
+    "validation_at_selection": {
+      "threshold": 0.15,
+      "precision": 0.8043010752688172,
+      "recall": 0.9973333333333333,
+      "f1": 0.8904761904761904,
+      "false_negative_rate": 0.0026666666666666666
+    }
+  },
+  "metrics": {
+    "validation_default_0_5": {
+      "precision": 0.994535519125683,
+      "recall": 0.9706666666666667,
+      "f1": 0.9824561403508771,
+      "false_negative_rate": 0.029333333333333333,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            859,
+            2
+          ],
+          [
+            11,
+            364
+          ]
+        ],
+        "tn": 859,
+        "fp": 2,
+        "fn": 11,
+        "tp": 364
+      },
+      "support": {
+        "n": 1236,
+        "n_positive": 375,
+        "n_negative": 861
+      }
+    },
+    "validation_tuned": {
+      "precision": 0.8043010752688172,
+      "recall": 0.9973333333333333,
+      "f1": 0.8904761904761904,
+      "false_negative_rate": 0.0026666666666666666,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            770,
+            91
+          ],
+          [
+            1,
+            374
+          ]
+        ],
+        "tn": 770,
+        "fp": 91,
+        "fn": 1,
+        "tp": 374
+      },
+      "support": {
+        "n": 1236,
+        "n_positive": 375,
+        "n_negative": 861
+      }
+    },
+    "test_default_0_5": {
+      "precision": 0.9968602825745683,
+      "recall": 0.9769230769230769,
+      "f1": 0.9867909867909868,
+      "false_negative_rate": 0.023076923076923078,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            1408,
+            2
+          ],
+          [
+            15,
+            635
+          ]
+        ],
+        "tn": 1408,
+        "fp": 2,
+        "fn": 15,
+        "tp": 635
+      },
+      "support": {
+        "n": 2060,
+        "n_positive": 650,
+        "n_negative": 1410
+      }
+    },
+    "test_tuned": {
+      "precision": 0.826530612244898,
+      "recall": 0.9969230769230769,
+      "f1": 0.9037656903765691,
+      "false_negative_rate": 0.003076923076923077,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            1274,
+            136
+          ],
+          [
+            2,
+            648
+          ]
+        ],
+        "tn": 1274,
+        "fp": 136,
+        "fn": 2,
+        "tp": 648
+      },
+      "support": {
+        "n": 2060,
+        "n_positive": 650,
+        "n_negative": 1410
+      }
+    }
+  },
+  "notes": [
+    "Official HF test split used only for final evaluation.",
+    "Validation carved from train via stratified split.",
+    "Threshold tuned on validation to prioritize injection recall subject to precision >= 0.80 when feasible.",
+    "False-negative rate = FN / (FN + TP) for label 1 (injection)."
+  ]
+}

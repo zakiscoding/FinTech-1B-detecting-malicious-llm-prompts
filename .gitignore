@@ -1,1 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
 
+# Notebooks / tooling
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Local model binaries (metrics JSON under artifacts/training may be committed)
+artifacts/training/*.joblib
+*.joblib
+
+# OS
+.DS_Store

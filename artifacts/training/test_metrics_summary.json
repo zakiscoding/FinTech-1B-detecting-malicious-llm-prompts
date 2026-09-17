@@ -1,0 +1,22 @@
+[
+  {
+    "model": "logreg",
+    "threshold": 0.15,
+    "precision": 0.8265,
+    "recall": 0.9969,
+    "f1": 0.9038,
+    "false_negative_rate": 0.0031,
+    "fn": 2,
+    "fp": 136
+  },
+  {
+    "model": "mlp",
+    "threshold": 0.2,
+    "precision": 0.8811,
+    "recall": 0.9923,
+    "f1": 0.9334,
+    "false_negative_rate": 0.0077,
+    "fn": 5,
+    "fp": 87
+  }
+]
