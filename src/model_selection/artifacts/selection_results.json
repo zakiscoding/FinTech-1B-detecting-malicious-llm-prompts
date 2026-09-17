@@ -1,0 +1,334 @@
+{
+  "dataset": "xTRam1/safe-guard-prompt-injection",
+  "n_train_fit": 7000,
+  "n_validation": 1236,
+  "n_test": 2060,
+  "max_features": 5000,
+  "val_size": 0.15,
+  "seed": 42,
+  "results": [
+    {
+      "precision": 0.9972602739726028,
+      "recall": 0.9706666666666667,
+      "f1": 0.9837837837837838,
+      "tn": 860,
+      "fp": 1,
+      "fn": 11,
+      "tp": 364,
+      "false_negative_rate": 0.029333333333333333,
+      "confusion_matrix": [
+        [
+          860,
+          1
+        ],
+        [
+          11,
+          364
+        ]
+      ],
+      "model": "logistic_regression",
+      "family": "sklearn",
+      "split": "validation"
+    },
+    {
+      "precision": 1.0,
+      "recall": 0.984,
+      "f1": 0.9919354838709677,
+      "tn": 861,
+      "fp": 0,
+      "fn": 6,
+      "tp": 369,
+      "false_negative_rate": 0.016,
+      "confusion_matrix": [
+        [
+          861,
+          0
+        ],
+        [
+          6,
+          369
+        ]
+      ],
+      "model": "linear_svc",
+      "family": "sklearn",
+      "split": "validation"
+    },
+    {
+      "precision": 1.0,
+      "recall": 0.968,
+      "f1": 0.983739837398374,
+      "tn": 861,
+      "fp": 0,
+      "fn": 12,
+      "tp": 363,
+      "false_negative_rate": 0.032,
+      "confusion_matrix": [
+        [
+          861,
+          0
+        ],
+        [
+          12,
+          363
+        ]
+      ],
+      "model": "multinomial_nb",
+      "family": "sklearn",
+      "split": "validation"
+    },
+    {
+      "precision": 0.9972375690607734,
+      "recall": 0.9626666666666667,
+      "f1": 0.9796472184531886,
+      "tn": 860,
+      "fp": 1,
+      "fn": 14,
+      "tp": 361,
+      "false_negative_rate": 0.037333333333333336,
+      "confusion_matrix": [
+        [
+          860,
+          1
+        ],
+        [
+          14,
+          361
+        ]
+      ],
+      "model": "random_forest",
+      "family": "sklearn",
+      "split": "validation"
+    },
+    {
+      "precision": 1.0,
+      "recall": 0.9786666666666667,
+      "f1": 0.9892183288409704,
+      "tn": 861,
+      "fp": 0,
+      "fn": 8,
+      "tp": 367,
+      "false_negative_rate": 0.021333333333333333,
+      "confusion_matrix": [
+        [
+          861,
+          0
+        ],
+        [
+          8,
+          367
+        ]
+      ],
+      "model": "keras_ffnn_64",
+      "family": "keras",
+      "split": "validation",
+      "arch": {
+        "hidden_units": [
+          64
+        ],
+        "dropout": 0.3,
+        "epochs": 8,
+        "batch_size": 64
+      }
+    },
+    {
+      "precision": 0.997289972899729,
+      "recall": 0.9813333333333333,
+      "f1": 0.989247311827957,
+      "tn": 860,
+      "fp": 1,
+      "fn": 7,
+      "tp": 368,
+      "false_negative_rate": 0.018666666666666668,
+      "confusion_matrix": [
+        [
+          860,
+          1
+        ],
+        [
+          7,
+          368
+        ]
+      ],
+      "model": "keras_ffnn_128_64",
+      "family": "keras",
+      "split": "validation",
+      "arch": {
+        "hidden_units": [
+          128,
+          64
+        ],
+        "dropout": 0.3,
+        "epochs": 8,
+        "batch_size": 64
+      }
+    },
+    {
+      "precision": 1.0,
+      "recall": 0.976,
+      "f1": 0.9878542510121457,
+      "tn": 861,
+      "fp": 0,
+      "fn": 9,
+      "tp": 366,
+      "false_negative_rate": 0.024,
+      "confusion_matrix": [
+        [
+          861,
+          0
+        ],
+        [
+          9,
+          366
+        ]
+      ],
+      "model": "keras_ffnn_256_128",
+      "family": "keras",
+      "split": "validation",
+      "arch": {
+        "hidden_units": [
+          256,
+          128
+        ],
+        "dropout": 0.4,
+        "epochs": 8,
+        "batch_size": 64
+      }
+    },
+    {
+      "precision": 0.9953416149068323,
+      "recall": 0.9861538461538462,
+      "f1": 0.990726429675425,
+      "tn": 1407,
+      "fp": 3,
+      "fn": 9,
+      "tp": 641,
+      "false_negative_rate": 0.013846153846153847,
+      "confusion_matrix": [
+        [
+          1407,
+          3
+        ],
+        [
+          9,
+          641
+        ]
+      ],
+      "model": "linear_svc",
+      "family": "sklearn",
+      "split": "test"
+    }
+  ],
+  "ranked_validation": [
+    {
+      "model": "linear_svc",
+      "recall": 0.984,
+      "f1": 0.9919354838709677,
+      "fn": 6
+    },
+    {
+      "model": "keras_ffnn_128_64",
+      "recall": 0.9813333333333333,
+      "f1": 0.989247311827957,
+      "fn": 7
+    },
+    {
+      "model": "keras_ffnn_64",
+      "recall": 0.9786666666666667,
+      "f1": 0.9892183288409704,
+      "fn": 8
+    },
+    {
+      "model": "keras_ffnn_256_128",
+      "recall": 0.976,
+      "f1": 0.9878542510121457,
+      "fn": 9
+    },
+    {
+      "model": "logistic_regression",
+      "recall": 0.9706666666666667,
+      "f1": 0.9837837837837838,
+      "fn": 11
+    },
+    {
+      "model": "multinomial_nb",
+      "recall": 0.968,
+      "f1": 0.983739837398374,
+      "fn": 12
+    },
+    {
+      "model": "random_forest",
+      "recall": 0.9626666666666667,
+      "f1": 0.9796472184531886,
+      "fn": 14
+    }
+  ],
+  "recommendation": {
+    "top_model": "linear_svc",
+    "selection_criterion": "Maximize validation recall on label 1 (injection), then F1, then precision; minimize false negatives.",
+    "validation_metrics": {
+      "precision": 1.0,
+      "recall": 0.984,
+      "f1": 0.9919354838709677,
+      "fn": 6,
+      "fp": 0,
+      "tn": 861,
+      "tp": 369,
+      "false_negative_rate": 0.016,
+      "confusion_matrix": [
+        [
+          861,
+          0
+        ],
+        [
+          6,
+          369
+        ]
+      ]
+    },
+    "test_metrics": {
+      "precision": 0.9953416149068323,
+      "recall": 0.9861538461538462,
+      "f1": 0.990726429675425,
+      "fn": 9,
+      "fp": 3,
+      "tn": 1407,
+      "tp": 641,
+      "false_negative_rate": 0.013846153846153847,
+      "confusion_matrix": [
+        [
+          1407,
+          3
+        ],
+        [
+          9,
+          641
+        ]
+      ]
+    },
+    "runners_up": [
+      {
+        "model": "keras_ffnn_128_64",
+        "recall": 0.9813333333333333,
+        "f1": 0.989247311827957,
+        "fn": 7
+      },
+      {
+        "model": "keras_ffnn_64",
+        "recall": 0.9786666666666667,
+        "f1": 0.9892183288409704,
+        "fn": 8
+      },
+      {
+        "model": "keras_ffnn_256_128",
+        "recall": 0.976,
+        "f1": 0.9878542510121457,
+        "fn": 9
+      }
+    ],
+    "notes": [
+      "Validation was carved from the official train split only (stratified).",
+      "Official test split used only for a smoke check of the top candidate.",
+      "Hyperparameter search and final training are out of scope for this slice."
+    ]
+  }
+}
