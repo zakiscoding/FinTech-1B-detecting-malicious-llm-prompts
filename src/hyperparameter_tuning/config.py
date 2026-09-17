@@ -31,8 +31,8 @@ TFIDF_BASE = {
 SEARCH_SPACES: dict[str, dict] = {
     # Strong linear baseline for sparse text; class_weight for injection recall.
     "logistic_regression": {
+        # Default L2; avoid deprecated `penalty=` kwarg on sklearn>=1.8.
         "clf__C": loguniform(1e-2, 1e2),
-        "clf__penalty": ["l2"],
         "clf__solver": ["liblinear", "saga"],
         "clf__class_weight": [None, "balanced"],
         "clf__max_iter": [2000],
